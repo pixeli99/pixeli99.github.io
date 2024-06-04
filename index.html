@@ -1,20 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-.doraemon {
-  font-size: 20px;
-  font-family: monospace;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengxiang Li</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            width: 100%;
+            background-color: #fff;
+            padding: 20px 0;
+            text-align: right;
+            border-bottom: 1px solid #ddd;
+        }
+        header a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000;
+        }
+        main {
+            max-width: 800px;
+            margin: 40px 20px;
+            text-align: left;
+        }
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content .text {
+            flex: 1;
+        }
+        .content .image {
+            flex: 1;
+            text-align: center;
+        }
+        .content .image img {
+            max-width: 70%;
+            height: auto;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #068419;
+        }
+    </style>
 </head>
 <body>
-
-<pre class="doraemon">
-     /\_/\
-    ( o.o )
-     > ^ <
-</pre>
-
+    <header>
+        <nav>
+            <a href="#">About</a>
+            <a href="CV/CV_Pengxiang_Li.pdf">CV</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=rUp_4RgAAAAJ">Publications</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <div class="text">
+                <h1>Pengxiang Li</h1>
+                <p>Greetings! I'm Pengxiang Li, currently pursuing my MSc in Artificial Intelligence at the Dalian University of Technology. I am working in the IIAU Lab under the supervision of Huchuan Lu.</p>
+                <p>My research interests include:</p>
+                <ul>
+                    <li># <a href="#">Video Generation</a></li>
+                    <li># <a href="#">Large Language Models</a></li>
+                    <li># <a href="#">Vision-Language Models</a></li>
+                    <li># <a href="#">Object Tracking</a></li>
+                </ul>
+                <p>Feel free to reach out if you'd like to discuss anything with me :)</p>
+            </div>
+            <div class="image">
+                <img src="https://github.com/pixeli99/pixeli99.github.io/assets/46072190/99304ebf-bb76-4c38-b6c2-ec67b614906c" alt="Pengxiang Li illustration">
+            </div>
+        </div>
+    </main>
 </body>
 </html>
