@@ -12,39 +12,65 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            animation: fadeIn 1s ease-in-out;
+            background-color: #f4f4f4;
         }
         header {
             width: 100%;
             background-color: #fff;
             padding: 20px 0;
             text-align: right;
+            padding-right: 20px;
             border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         header a {
             margin: 0 15px;
             text-decoration: none;
             color: #000;
+            transition: color 0.3s;
+        }
+        header a:hover {
+            color: #068419;
         }
         main {
             max-width: 800px;
             margin: 40px 20px;
             text-align: left;
+            animation: slideIn 1s ease-in-out;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         .content .text {
             flex: 1;
+            animation: fadeInUp 1s ease-in-out;
+            min-width: 280px;
         }
         .content .image {
             flex: 1;
             text-align: center;
+            min-width: 280px;
         }
         .content .image img {
             max-width: 70%;
             height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .content .image img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
         h1 {
             font-size: 2em;
@@ -63,12 +89,48 @@
         ul li a {
             text-decoration: none;
             color: #068419;
+            transition: color 0.3s;
+        }
+        ul li a:hover {
+            color: #004d00;
+        }
+        .contact {
+            margin-top: 20px;
+        }
+        .contact a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        footer {
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="#">About</a>
             <a href="CV/CV_Pengxiang_Li.pdf">CV</a>
             <a href="https://scholar.google.com/citations?hl=en&user=rUp_4RgAAAAJ">Publications</a>
@@ -78,15 +140,16 @@
         <div class="content">
             <div class="text">
                 <h1>Pengxiang Li</h1>
-                <p>Greetings! I'm Pengxiang Li, currently pursuing my MSc in Artificial Intelligence at the Dalian University of Technology. I am working in the IIAU Lab under the supervision of Huchuan Lu.</p>
+                <p>Greetings! 👋 I'm Pengxiang Li, currently pursuing my MSc in Artificial Intelligence at the Dalian University of Technology. I am working in the IIAU Lab under the supervision of <a href="https://scholar.google.com/citations?user=D3nE0agAAAAJ&hl=en">Huchuan Lu</a>.</p>
                 <p>My research interests include:</p>
                 <ul>
-                    <li># <a href="#">Video Generation</a></li>
-                    <li># <a href="#">Large Language Models</a></li>
-                    <li># <a href="#">Vision-Language Models</a></li>
-                    <li># <a href="#">Object Tracking</a></li>
+                    <li># <a href="#">Video Generation 🎥</a></li>
+                    <li># <a href="#">Large Language Models 🧠</a></li>
+                    <li># <a href="#">Vision-Language Models 👁️‍🗨️</a></li>
+                    <li># <a href="#">Object Tracking 🚶‍♂️</a></li>
                 </ul>
                 <p>Feel free to reach out if you'd like to discuss anything with me :)</p>
+                <p class="contact">Email: <a href="mailto:lipengxiang@mail.dlut.edu.cn">lipengxiang@mail.dlut.edu.cn</a></p>
             </div>
             <div class="image">
                 <img src="https://github.com/pixeli99/pixeli99.github.io/assets/46072190/99304ebf-bb76-4c38-b6c2-ec67b614906c" alt="Pengxiang Li illustration">
