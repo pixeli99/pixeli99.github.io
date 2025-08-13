@@ -3,158 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengxiang Li</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            animation: fadeIn 1s ease-in-out;
-            background-color: #f4f4f4;
-        }
-        header {
-            width: 100%;
-            background-color: #fff;
-            padding: 20px 0;
-            text-align: right;
-            padding-right: 20px;
-            border-bottom: 1px solid #ddd;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        header a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #000;
-            transition: color 0.3s;
-        }
-        header a:hover {
-            color: #068419;
-        }
-        main {
-            max-width: 800px;
-            margin: 40px 20px;
-            text-align: left;
-            animation: slideIn 1s ease-in-out;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .content .text {
-            flex: 1;
-            animation: fadeInUp 1s ease-in-out;
-            min-width: 280px;
-        }
-        .content .image {
-            flex: 1;
-            text-align: center;
-            min-width: 280px;
-        }
-        .content .image img {
-            max-width: 70%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .content .image img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-        p {
-            line-height: 1.6;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-        ul li a {
-            text-decoration: none;
-            color: #068419;
-            transition: color 0.3s;
-        }
-        ul li a:hover {
-            color: #004d00;
-        }
-        .contact {
-            margin-top: 20px;
-        }
-        .contact a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        footer {
-            width: 100%;
-            background-color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            border-top: 1px solid #ddd;
-            margin-top: 20px;
-        }
-        footer p {
-            margin: 0;
-            font-size: 0.9em;
-            color: #666;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes fadeInUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-    </style>
+    <title>pengxiang@ai-lab:~$</title>
+    <meta name="description" content="AI Researcher CLI - Interactive Terminal Portfolio">
+    <meta name="author" content="Pengxiang Li">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav aria-label="Main navigation">
-            <a href="#">About</a>
-            <a href="CV/CV_Pengxiang_Li.pdf">CV</a>
-            <a href="https://scholar.google.com/citations?hl=en&user=rUp_4RgAAAAJ">Publications</a>
-        </nav>
-    </header>
-    <main>
-        <div class="content">
-            <div class="text">
-                <h1>Pengxiang Li</h1>
-                <p>Greetings! 👋 I'm Pengxiang Li, currently pursuing my MSc in Artificial Intelligence at the Dalian University of Technology. I am working in the IIAU Lab under the supervision of <a href="https://scholar.google.com/citations?user=D3nE0agAAAAJ&hl=en">Huchuan Lu</a>.</p>
-                <p>My research interests include:</p>
-                <ul>
-                    <li># <a href="#">Video Generation 🎥</a></li>
-                    <li># <a href="#">Large Language Models 🧠</a></li>
-                    <li># <a href="#">Vision-Language Models 👁️‍🗨️</a></li>
-                    <li># <a href="#">Object Tracking 🚶‍♂️</a></li>
-                </ul>
-                <p>Feel free to reach out if you'd like to discuss anything with me :)</p>
-                <p class="contact">Email: <a href="mailto:lipengxiang@mail.dlut.edu.cn">lipengxiang@mail.dlut.edu.cn</a></p>
+    <!-- Terminal Container -->
+    <div class="terminal-container">
+        <!-- Terminal Header -->
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <div class="btn red"></div>
+                <div class="btn yellow"></div>
+                <div class="btn green"></div>
             </div>
-            <div class="image">
-                <img src="https://github.com/pixeli99/pixeli99.github.io/assets/46072190/99304ebf-bb76-4c38-b6c2-ec67b614906c" alt="Pengxiang Li illustration">
+            <div class="terminal-title">pengxiang@ai-lab: ~</div>
+            <div class="terminal-controls">
+                <button class="theme-toggle" id="theme-toggle" title="Toggle theme">⚡</button>
             </div>
         </div>
-    </main>
+
+        <!-- Terminal Content -->
+        <div class="terminal-content" id="terminal-content">
+            <!-- Initial Boot Sequence -->
+            <div class="boot-sequence" id="boot-sequence">
+                <div class="boot-line ascii-header">
+    ╔══════════════════════════════════════════════════════════════╗
+    ║           👨‍🎓 Pengxiang Li's Academic Portfolio            ║
+    ║        PhD Student in AI | Hong Kong Polytechnic University ║
+    ╚══════════════════════════════════════════════════════════════╝
+                </div>
+                <div class="boot-line">Connecting to academic databases...</div>
+                <div class="boot-line success">✓ Google Scholar profile synchronized</div>
+                <div class="boot-line success">✓ Research portfolio loaded</div>
+                <div class="boot-line">Initializing research domains...</div>
+                <div class="boot-line success">✓ Large Language Models (LLMs)</div>
+                <div class="boot-line success">✓ Diffusion Models & Video Generation</div>
+                <div class="boot-line success">✓ Multimodal GUI Agents</div>
+                <div class="boot-line success">✓ Automated Evaluation Systems</div>
+                <div class="boot-line">
+                </div>
+                <div class="boot-line">Research portfolio ready. Explore via commands or click above ↗</div>
+                <div class="boot-line"></div>
+            </div>
+
+            <!-- Default Profile Display -->
+            <div class="default-profile" id="default-profile">
+                <div class="profile-container">
+                    <div class="profile-left">
+                        <div class="photo-display">
+                            <div class="photo-container pixel-frame">
+                                <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=rUp_4RgAAAAJ&citpid=6" 
+                                     alt="Pengxiang Li" 
+                                     class="profile-photo pixel-glow">
+                                <div class="pixel-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-right">
+                        <div class="profile-header">
+                            <h2 class="profile-name pixel-text">Pengxiang Li</h2>
+                            <div class="profile-title pixel-subtitle">PhD Student in AI | The Hong Kong Polytechnic University</div>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="stat-card">
+                                <div class="stat-icon">📚</div>
+                                <div class="stat-info">
+                                    <span class="stat-number">15+</span>
+                                    <span class="stat-label">Publications</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">🏆</div>
+                                <div class="stat-info">
+                                    <span class="stat-number">180+</span>
+                                    <span class="stat-label">Citations</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">🔬</div>
+                                <div class="stat-info">
+                                    <span class="stat-number">4</span>
+                                    <span class="stat-label">Research Areas</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-links">
+                            <a href="mailto:lipengxiang@mail.dlut.edu.cn" class="profile-link pixel-button">
+                                📧 Email
+                            </a>
+                            <a href="https://scholar.google.com/citations?hl=en&user=rUp_4RgAAAAJ" target="_blank" class="profile-link pixel-button">
+                                🎓 Scholar
+                            </a>
+                            <a href="https://github.com/pixeli99" target="_blank" class="profile-link pixel-button">
+                                💻 GitHub
+                            </a>
+                            <a href="CV/CV_Pengxiang_Li.pdf" target="_blank" class="profile-link pixel-button">
+                                📄 CV/Resume
+                            </a>
+                        </div>
+                        <div class="research-tags">
+                            <span class="research-tag pixel-tag">LLMs</span>
+                            <span class="research-tag pixel-tag">Diffusion Models</span>
+                            <span class="research-tag pixel-tag">GUI Agents</span>
+                            <span class="research-tag pixel-tag">Video Generation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Command History -->
+            <div class="command-history" id="command-history"></div>
+
+            <!-- Current Input Line -->
+            <div class="input-line">
+                <span class="prompt">
+                    <span class="user">pengxiang</span>@<span class="host">polyu-ai</span>:<span class="path">~</span>$ 
+                </span>
+                <span class="input-text" id="input-text"></span>
+                <span class="cursor" id="cursor">█</span>
+            </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar" id="status-bar">
+            <div class="status-left">
+                <span class="status-item">
+                    <i class="status-icon">⚡</i>
+                    <span id="system-status">ONLINE</span>
+                </span>
+                <span class="status-item">
+                    <i class="status-icon">🏫</i>
+                    <span>PolyU</span>
+                </span>
+                <span class="status-item">
+                    <i class="status-icon">📍</i>
+                    <span>Hong Kong</span>
+                </span>
+            </div>
+            <div class="status-right">
+                <span class="status-item">
+                    <i class="status-icon">📊</i>
+                    <span id="command-count">0 commands</span>
+                </span>
+                <span class="status-item">
+                    <i class="status-icon">🕒</i>
+                    <span id="current-time">--:--</span>
+                </span>
+                <span class="status-item theme-indicator">
+                    <i class="status-icon">🌙</i>
+                    <span id="theme-status">Dark</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- Command Panel -->
+        <div class="command-panel" id="command-panel">
+            <div class="panel-header">
+                <span class="panel-title">Available Commands</span>
+                <button class="panel-toggle" id="panel-toggle">−</button>
+            </div>
+            <div class="panel-content" id="panel-content">
+                <div class="command-sections">
+                    <!-- Personal Info -->
+                    <div class="cmd-section">
+                        <div class="section-title">👤 Personal</div>
+                        <div class="cmd-group">
+                            <div class="cmd-item" data-command="about">
+                                <span class="cmd-name">about</span>
+                                <span class="cmd-desc">Learn about me</span>
+                            </div>
+                            <div class="cmd-item" data-command="photo">
+                                <span class="cmd-name">photo</span>
+                                <span class="cmd-desc">Show my photo</span>
+                            </div>
+                            <div class="cmd-item" data-command="cv">
+                                <span class="cmd-name">cv</span>
+                                <span class="cmd-desc">Download resume</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Work -->
+                    <div class="cmd-section">
+                        <div class="section-title">🎓 Academic</div>
+                        <div class="cmd-group">
+                            <div class="cmd-item" data-command="research">
+                                <span class="cmd-name">research</span>
+                                <span class="cmd-desc">Research interests</span>
+                            </div>
+                            <div class="cmd-item" data-command="publications">
+                                <span class="cmd-name">publications</span>
+                                <span class="cmd-desc">Academic papers</span>
+                            </div>
+                            <div class="cmd-item" data-command="projects">
+                                <span class="cmd-name">projects</span>
+                                <span class="cmd-desc">Browse projects</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical & Contact -->
+                    <div class="cmd-section">
+                        <div class="section-title">💻 Technical</div>
+                        <div class="cmd-group">
+                            <div class="cmd-item" data-command="skills">
+                                <span class="cmd-name">skills</span>
+                                <span class="cmd-desc">Technical skills</span>
+                            </div>
+                            <div class="cmd-item" data-command="contact">
+                                <span class="cmd-name">contact</span>
+                                <span class="cmd-desc">Get in touch</span>
+                            </div>
+                            <div class="cmd-item" data-command="neofetch">
+                                <span class="cmd-name">neofetch</span>
+                                <span class="cmd-desc">System info</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- System Commands -->
+                    <div class="cmd-section">
+                        <div class="section-title">⚙️ System</div>
+                        <div class="cmd-group">
+                            <div class="cmd-item" data-command="help">
+                                <span class="cmd-name">help</span>
+                                <span class="cmd-desc">Show help</span>
+                            </div>
+                            <div class="cmd-item" data-command="clear">
+                                <span class="cmd-name">clear</span>
+                                <span class="cmd-desc">Clear screen</span>
+                            </div>
+                            <div class="cmd-item" data-command="theme">
+                                <span class="cmd-name">theme</span>
+                                <span class="cmd-desc">Toggle theme</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Helper -->
+        <div class="mobile-helper" id="mobile-helper">
+            <div class="mobile-header">Available Commands:</div>
+            <div class="mobile-commands">
+                <button class="mobile-cmd" data-command="about">about</button>
+                <button class="mobile-cmd" data-command="skills">skills</button>
+                <button class="mobile-cmd" data-command="research">research</button>
+                <button class="mobile-cmd" data-command="projects">projects</button>
+                <button class="mobile-cmd" data-command="publications">publications</button>
+                <button class="mobile-cmd" data-command="contact">contact</button>
+                <button class="mobile-cmd" data-command="photo">photo</button>
+                <button class="mobile-cmd" data-command="help">help</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Input for Mobile -->
+    <input type="text" id="hidden-input" class="hidden-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+
+    <script src="script.js"></script>
 </body>
 </html>
