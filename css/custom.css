@@ -1,0 +1,441 @@
+/* Custom Typography and Clean Design with Google/Claude Colors */
+
+/* Import better fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap');
+
+/* Color System inspired by Google & Claude */
+:root {
+    --google-blue: #4285F4;
+    --google-red: #EA4335;
+    --google-yellow: #FBBC04;
+    --google-green: #34A853;
+    --claude-orange: #FF6B35;
+    --text-primary: #202124;
+    --text-secondary: #5f6368;
+    --text-light: #80868b;
+    --border-light: #e8eaed;
+}
+
+/* Global font and color system */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    color: var(--text-primary) !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* Reduce overall spacing */
+.wrapper {
+    padding: 30px 40px !important;
+}
+
+.section {
+    margin-bottom: 25px !important;
+}
+
+/* Section titles - Subtle color accents */
+.section-title {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: 15px !important;
+    padding-bottom: 6px !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    position: relative !important;
+}
+
+/* Add a subtle colored accent line under section titles */
+.section-title:after {
+    content: "" !important;
+    position: absolute !important;
+    bottom: -1px !important;
+    left: 0 !important;
+    height: 2px !important;
+    width: 30px !important;
+}
+
+.profile-section .section-title:after {
+    background: var(--google-blue) !important;
+}
+
+.news-section .section-title:after {
+    background: var(--google-green) !important;
+}
+
+.publication-section .section-title:after {
+    background: var(--claude-orange) !important;
+}
+
+.section:nth-of-type(4) .section-title:after {
+    background: var(--google-red) !important;
+}
+
+.section:nth-of-type(5) .section-title:after {
+    background: var(--google-yellow) !important;
+}
+
+/* Profile section - Clean and professional */
+.intro-section {
+    margin-bottom: 25px !important;
+}
+
+.intro-section .name {
+    font-family: 'Source Serif Pro', serif !important;
+    font-size: 32px !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 5px !important;
+}
+
+.intro-section .title {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: 8px !important;
+}
+
+/* Special accent for PolyU */
+.intro-section .title:after {
+    content: " •" !important;
+    color: var(--claude-orange) !important;
+    font-weight: 700 !important;
+}
+
+.intro-section .contact {
+    margin-top: 10px !important;
+}
+
+.intro-section .contact a {
+    font-size: 14px !important;
+    color: var(--google-blue) !important;
+    font-weight: 500 !important;
+    position: relative !important;
+}
+
+.intro-section .contact a:hover {
+    color: #1967D2 !important;
+    text-decoration: none !important;
+}
+
+/* Different colors for different contact links */
+.intro-section .contact a:nth-child(1) {
+    color: var(--google-blue) !important;
+}
+
+.intro-section .contact a[href*="github"] {
+    color: var(--text-secondary) !important;
+}
+
+.intro-section .contact a[href*="github"]:hover {
+    color: var(--text-primary) !important;
+}
+
+.intro-section .contact a[href*="scholar"] {
+    color: var(--google-green) !important;
+}
+
+.intro-section .contact a[href*="scholar"]:hover {
+    color: #1E8E3E !important;
+}
+
+.intro-section .contact a[href*="CV"] {
+    color: var(--google-red) !important;
+}
+
+.intro-section .contact a[href*="CV"]:hover {
+    color: #C5221F !important;
+}
+
+/* Avatar - Cleaner look */
+.avatar {
+    border-radius: 8px !important;
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: cover !important;
+    border: 2px solid var(--border-light) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* About Me section */
+.profile-section .details {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    color: var(--text-secondary) !important;
+}
+
+.profile-section .details ul {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.profile-section .details li {
+    margin-bottom: 6px !important;
+    font-size: 14px !important;
+    color: var(--text-secondary) !important;
+}
+
+.profile-section .details li strong {
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+}
+
+/* Highlight specific research areas with subtle colors */
+.profile-section .details li:nth-child(1) strong {
+    color: var(--google-blue) !important;
+}
+
+.profile-section .details li:nth-child(2) strong {
+    color: var(--google-green) !important;
+}
+
+.profile-section .details li:nth-child(3) strong {
+    color: var(--claude-orange) !important;
+}
+
+.profile-section .details li:nth-child(4) strong {
+    color: var(--google-red) !important;
+}
+
+/* News section - Compact */
+.news-section {
+    margin-bottom: 25px !important;
+}
+
+.news-section div[style*="height:200px"] {
+    height: 120px !important;
+}
+
+.news-section ul {
+    margin: 0 !important;
+    padding-left: 0 !important;
+}
+
+.news-section li {
+    font-size: 13px !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: 6px !important;
+    padding-left: 15px !important;
+    position: relative !important;
+}
+
+/* Colored bullets for news */
+.news-section li:before {
+    content: "▸" !important;
+    position: absolute !important;
+    left: 0 !important;
+    color: var(--google-green) !important;
+    font-weight: 700 !important;
+}
+
+/* Publications - Clean and readable */
+.publication-section .publication {
+    margin-bottom: 20px !important;
+    padding-bottom: 15px !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.publication-section .publication:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.publication-section .publication-title {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    margin-bottom: 4px !important;
+    color: var(--text-primary) !important;
+}
+
+.publication-section .publication-authors {
+    font-size: 13px !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: 3px !important;
+    line-height: 1.4 !important;
+}
+
+/* Your name highlighted with Claude orange */
+.publication-section .publication-authors strong {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    background: linear-gradient(120deg, rgba(255,107,53,0.15) 0%, rgba(255,107,53,0.15) 100%) !important;
+    padding: 1px 3px !important;
+    border-radius: 2px !important;
+}
+
+/* Venue colors based on type */
+.publication-section .publication-venue {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    margin-bottom: 6px !important;
+}
+
+/* Color code venues */
+.publication-venue:contains("ICLR"),
+.publication-venue:contains("NeurIPS"),
+.publication-venue:contains("ICML") {
+    color: var(--google-blue) !important;
+}
+
+.publication-venue:contains("WACV"),
+.publication-venue:contains("CVPR"),
+.publication-venue:contains("ICCV") {
+    color: var(--google-green) !important;
+}
+
+.publication-venue:contains("ACL"),
+.publication-venue:contains("EMNLP") {
+    color: var(--google-red) !important;
+}
+
+.publication-venue:contains("MM"),
+.publication-venue:contains("arXiv") {
+    color: var(--claude-orange) !important;
+}
+
+/* Default color for venues */
+.publication-venue {
+    color: var(--google-red) !important;
+}
+
+.publication-section .publication-desc {
+    font-size: 13px !important;
+    color: var(--text-light) !important;
+    line-height: 1.5 !important;
+    margin-bottom: 8px !important;
+}
+
+.publication-section .publication-links {
+    margin-top: 6px !important;
+}
+
+.publication-section .link-button {
+    font-size: 12px !important;
+    padding: 2px 8px !important;
+    margin-right: 6px !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 3px !important;
+    color: var(--text-secondary) !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: all 0.15s !important;
+    background: white !important;
+}
+
+.publication-section .link-button:hover {
+    border-color: var(--google-blue) !important;
+    color: var(--google-blue) !important;
+    background: rgba(66,133,244,0.04) !important;
+}
+
+/* Different hover colors for different link types */
+.publication-section .link-button:contains("Code"):hover {
+    border-color: var(--google-green) !important;
+    color: var(--google-green) !important;
+    background: rgba(52,168,83,0.04) !important;
+}
+
+/* Research Interests - Compact list */
+.section .details ul {
+    padding-left: 20px !important;
+    margin: 10px 0 !important;
+}
+
+.section .details li {
+    font-size: 14px !important;
+    margin-bottom: 5px !important;
+    line-height: 1.5 !important;
+    color: var(--text-secondary) !important;
+}
+
+/* Education section - Timeline style with colors */
+.education-item {
+    padding: 8px 0 !important;
+    padding-left: 15px !important;
+    margin-bottom: 10px !important;
+    border-left: 2px solid var(--border-light) !important;
+    position: relative !important;
+}
+
+.education-item:before {
+    content: "" !important;
+    position: absolute !important;
+    left: -5px !important;
+    top: 12px !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+}
+
+/* Different colors for education timeline */
+.education-item:nth-child(1):before {
+    background: var(--google-blue) !important;
+}
+
+.education-item:nth-child(2):before {
+    background: var(--claude-orange) !important;
+}
+
+.education-item:nth-child(3):before {
+    background: var(--google-green) !important;
+}
+
+.education-item:last-child {
+    margin-bottom: 0 !important;
+}
+
+.education-item .degree {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+    margin-bottom: 2px !important;
+}
+
+.education-item .university {
+    font-size: 14px !important;
+    color: var(--text-secondary) !important;
+    margin-bottom: 2px !important;
+}
+
+.education-item .time {
+    font-size: 12px !important;
+    color: var(--text-light) !important;
+}
+
+/* Highlight advisor names */
+.education-item .time:contains("Advisor") {
+    color: var(--text-secondary) !important;
+}
+
+/* General links */
+a {
+    color: var(--google-blue) !important;
+    text-decoration: none !important;
+    transition: color 0.15s !important;
+}
+
+a:hover {
+    color: #1967D2 !important;
+}
+
+/* Improve readability */
+p {
+    margin-bottom: 10px !important;
+}
+
+/* Remove excessive padding */
+.wrapper .section .intro ul,
+.wrapper .section .details ul {
+    margin-bottom: 0 !important;
+}
+
+/* Ensure Chinese characters display well */
+body, .education-item .university {
+    font-feature-settings: 'kern' 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
