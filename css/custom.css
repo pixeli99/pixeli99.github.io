@@ -231,16 +231,81 @@ body {
     font-weight: 700 !important;
 }
 
-/* Publications - Clean and readable */
+/* Publications - Clean and readable with images */
 .publication-section .publication {
-    margin-bottom: 20px !important;
-    padding-bottom: 15px !important;
+    margin-bottom: 25px !important;
+    padding-bottom: 20px !important;
     border-bottom: 1px solid var(--border-light) !important;
+    display: flex !important;
+    gap: 20px !important;
+    align-items: flex-start !important;
 }
 
 .publication-section .publication:last-child {
     border-bottom: none !important;
     padding-bottom: 0 !important;
+}
+
+/* Publication image styling */
+.publication-section .publication-image {
+    flex-shrink: 0 !important;
+    width: 180px !important;
+    height: 100px !important;
+    overflow: hidden !important;
+    border-radius: 6px !important;
+    border: 1px solid var(--border-light) !important;
+    background: #f8f9fa !important;
+    position: relative !important;
+}
+
+.publication-section .publication-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.3s ease !important;
+}
+
+.publication-section .publication-image:hover img {
+    transform: scale(1.05) !important;
+}
+
+/* If no image is available, show placeholder */
+.publication-section .publication-image:not(:has(img)),
+.publication-section .publication-image img[src=""] {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--text-light) !important;
+    font-size: 12px !important;
+}
+
+.publication-section .publication-image:not(:has(img)):before,
+.publication-section .publication-image img[src=""]:before {
+    content: "Paper Figure" !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+/* Publication info adjustments */
+.publication-section .publication-info {
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .publication-section .publication {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    
+    .publication-section .publication-image {
+        width: 100% !important;
+        height: 150px !important;
+    }
 }
 
 .publication-section .publication-title {
