@@ -29,7 +29,7 @@ const publications = [
     {
         title: "Adaptive Classifier-Free Guidance via Dynamic Low-Confidence Masking",
         authors: "<strong>Pengxiang Li</strong>, Shilin Yan, Joey Tsai, Renrui Zhang, Ruichuan An, Ziyu Guo, Xiaowei Gao",
-        venue: "arXiv 2025",
+        venue: "NeurIPS 2025",
         description: "We propose Adaptive Classifier-Free Guidance (A-CFG), which dynamically adapts CFG by re-masking tokens with low model confidence during iterative diffusion-based generation. This localized, dynamic unconditional input improves controllability and quality, achieving up to 3.9 point gains on GPQA compared to standard CFG.",
         image: "./images/papers/acfg.png",
         links: {
@@ -42,7 +42,7 @@ const publications = [
     {
         title: "The Curse of Depth in Large Language Models",
         authors: "Wenfang Sun, Xinyuan Song, <strong>Pengxiang Li</strong>, Lu Yin, Yefeng Zheng, Shiwei Liu",
-        venue: "arXiv 2025",
+        venue: "NeurIPS 2025",
         description: "Investigates the depth scaling challenges in LLMs and proposes solutions for training deeper and more effective models.",
         image: "./images/papers/cod.png",
         links: {
