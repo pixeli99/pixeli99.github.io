@@ -1,6 +1,58 @@
 // 论文数据管理 - 在这里添加/修改你的论文信息
 const publications = [
     {
+        title: "Discrete Diffusion for Reflective Vision-Language-Action Models in Autonomous Driving",
+        authors: "<strong>Pengxiang Li</strong>, Yinan Zheng, Yue Wang, Huimin Wang, Hang Zhao, Jingjing Liu, Xianyuan Zhan, Kun Zhan, Xianpeng Lang",
+        venue: "ICLR 2026",
+        description: "ReflectDrive uses discrete diffusion with a safety-aware reflection mechanism to generate safe, multimodal driving trajectories without gradient-based guidance.",
+        image: "./images/papers/reflect.png",
+        links: {
+            paper: "https://arxiv.org/pdf/2509.20109",
+            code: null,
+            project: null,
+            video: null
+        }
+    },
+    {
+        title: "Diffusion language models know the answer before decoding",
+        authors: "<strong>Pengxiang Li</strong>, Yefan Zhou, Dilxat Muhtar, Lu Yin, Shilin Yan, Li Shen, Yi Liang, Soroush Vosoughi, Shiwei Liu",
+        venue: "ICLR 2026 (Oral)",
+        description: "Prophet is a training-free early-commit decoding method for diffusion LMs that reduces refinement steps (up to 3.4×) using a top-2 confidence-gap criterion while preserving quality.",
+        image: "./images/papers/prophet.png",
+        links: {
+            paper: "https://arxiv.org/pdf/2508.19982",
+            code: "https://github.com/pixeli99/Prophet",
+            project: null,
+            video: null
+        }
+    },
+    {
+        title: "InfiGUI-G1: Advancing GUI Grounding with Adaptive Exploration Policy Optimization",
+        authors: "Yuhang Liu, Zeyu Liu, Shuanghe Zhu, <strong>Pengxiang Li</strong>, Congkai Xie, Jiasheng Wang, Xueyu Hu, Xiaotian Han, Jianbo Yuan, Xinyao Wang, Shengyu Zhang, Hongxia Yang, Fei Wu",
+        venue: "AAAI 2026 (Oral)",
+        description: "AEPO improves semantic alignment in GUI grounding by encouraging broader exploration with a multi-answer strategy guided by an efficiency-based reward, yielding up to 9.0% gains over RLVR.",
+        image: "./images/papers/g1.png",
+        links: {
+            paper: null,
+            code: "https://github.com/InfiXAI/InfiGUI-G1",
+            project: null,
+            video: null
+        }
+    },
+    {
+        title: "TransDiffuser: End-to-end trajectory generation with decorrelated multi-modal representation for autonomous driving",
+        authors: "Xuefeng Jiang, Yuan Ma, <strong>Pengxiang Li</strong>, Leimeng Xu, Xin Wen, Kun Zhan, Zhongpu Xia, Peng Jia, Xianpeng Lang, Sheng Sun",
+        venue: "ICRA 2026",
+        description: "An encoder-decoder diffusion planner that mitigates mode collapse via multi-modal representation decorrelation, achieving 94.85 PDMS on NAVSIM without anchor-based priors.",
+        image: "./images/papers/transdiffuser.png",
+        links: {
+            paper: "https://arxiv.org/pdf/2505.09315",
+            code: null,
+            project: null,
+            video: null
+        }
+    },
+    {
         title: "InfiGUIAgent: A Multimodal Generalist GUI Agent with Native Reasoning and Reflection",
         authors: "Yuhang Liu, <strong>Pengxiang Li</strong>, Zishu Wei, Congkai Xie, Xueyu Hu, Xinchen Xu, Shengyu Zhang, Xiaotian Han, Hongxia Yang, Fei Wu",
         venue: "arXiv 2025",
