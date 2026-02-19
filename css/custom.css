@@ -91,6 +91,13 @@ body {
     margin-bottom: 5px !important;
 }
 
+.intro-section .name .name-cn {
+    font-family: "Liu Jian Mao Cao", "Zhi Mang Xing", "Ma Shan Zheng", "Kaiti SC", "STKaiti", "KaiTi", serif !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.02em !important;
+    font-size: 1.18em !important;
+}
+
 .intro-section .title {
     font-size: 16px !important;
     font-weight: 500 !important;
@@ -154,10 +161,14 @@ body {
 .avatar {
     border-radius: 8px !important;
     width: 120px !important;
-    height: 120px !important;
+    height: 160px !important;
     object-fit: cover !important;
     border: 2px solid var(--border-light) !important;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.intro-section .avatar-container .avatar {
+    margin-top: -18px !important;
 }
 
 /* About Me section */
