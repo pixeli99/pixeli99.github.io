@@ -1,6 +1,32 @@
 // 论文数据管理 - 在这里添加/修改你的论文信息
 const publications = [
     {
+        title: "ReflectDrive-2: Reinforcement-Learning-Aligned Self-Editing for Discrete Diffusion Driving",
+        authors: "Huimin Wang, Yue Wang, Bihao Cui, <strong>Pengxiang Li</strong>, Ben Lu, Mingqian Wang, Tong Wang, Chuan Tang, Teng Zhang, Kun Zhan",
+        venue: "arXiv 2026",
+        description: "ReflectDrive-2 learns to draft and revise driving trajectories in a shared discrete token space, using reinforcement learning over the full generation-and-editing process.",
+        image: "./images/papers/reflect2.png",
+        links: {
+            paper: "https://arxiv.org/abs/2605.04647",
+            code: null,
+            project: null,
+            video: null
+        }
+    },
+    {
+        title: "Why Diffusion Language Models Struggle with Truly Parallel (Non-Autoregressive) Decoding?",
+        authors: "<strong>Pengxiang Li</strong>, Dilxat Muhtar, Tianlong Chen, Lu Yin, Shiwei Liu",
+        venue: "arXiv 2026",
+        description: "NAP studies the mismatch between sequential training data and parallel decoding, and trains diffusion language models on independent reasoning trajectories to support parallel generation.",
+        image: "./images/papers/nap.png",
+        links: {
+            paper: "https://arxiv.org/abs/2602.23225",
+            code: "https://github.com/pixeli99/NAP",
+            project: null,
+            video: null
+        }
+    },
+    {
         title: "Discrete Diffusion for Reflective Vision-Language-Action Models in Autonomous Driving",
         authors: "<strong>Pengxiang Li</strong>, Yinan Zheng, Yue Wang, Huimin Wang, Hang Zhao, Jingjing Liu, Xianyuan Zhan, Kun Zhan, Xianpeng Lang",
         venue: "ICLR 2026",
@@ -14,8 +40,8 @@ const publications = [
         }
     },
     {
-        title: "Diffusion language models know the answer before decoding",
-        authors: "<strong>Pengxiang Li</strong>, Yefan Zhou, Dilxat Muhtar, Lu Yin, Shilin Yan, Li Shen, Yi Liang, Soroush Vosoughi, Shiwei Liu",
+        title: "Diffusion Language Models Know the Answer Before Decoding",
+        authors: "<strong>Pengxiang Li</strong>, Yefan Zhou, Dilxat Muhtar, Lu Yin, Shilin Yan, Li Shen, Soroush Vosoughi, Shiwei Liu",
         venue: "ICLR 2026 (Oral)",
         description: "Prophet is a training-free early-commit decoding method for diffusion LMs that reduces refinement steps (up to 3.4×) using a top-2 confidence-gap criterion while preserving quality.",
         image: "./images/papers/prophet.png",
@@ -33,7 +59,7 @@ const publications = [
         description: "AEPO improves semantic alignment in GUI grounding by encouraging broader exploration with a multi-answer strategy guided by an efficiency-based reward, yielding up to 9.0% gains over RLVR.",
         image: "./images/papers/g1.png",
         links: {
-            paper: null,
+            paper: "https://arxiv.org/abs/2508.05731",
             code: "https://github.com/InfiXAI/InfiGUI-G1",
             project: null,
             video: null
@@ -55,13 +81,13 @@ const publications = [
     {
         title: "InfiGUIAgent: A Multimodal Generalist GUI Agent with Native Reasoning and Reflection",
         authors: "Yuhang Liu, <strong>Pengxiang Li</strong>, Zishu Wei, Congkai Xie, Xueyu Hu, Xinchen Xu, Shengyu Zhang, Xiaotian Han, Hongxia Yang, Fei Wu",
-        venue: "arXiv 2025",
+        venue: "EACL 2026",
         description: "A multimodal generalist GUI agent that combines native reasoning and reflection capabilities for advanced GUI automation tasks.",
         image: "./images/papers/infigui-agent.png",
         links: {
-            paper: "https://arxiv.org/abs/2501.04575",
+            paper: "https://aclanthology.org/2026.eacl-long.45/",
             code: "https://github.com/InfiXAI/InfiGUIAgent",
-            project: null,
+            project: "https://b7277.github.io/InfiGUIAgent.github.io/",
             video: null
         }
     },
@@ -87,6 +113,19 @@ const publications = [
         links: {
             paper: "https://arxiv.org/pdf/2505.20199",
             code: null,
+            project: null,
+            video: null
+        }
+    },
+    {
+        title: "GPAS: Accelerating Convergence of LLM Pretraining via Gradient-Preserving Activation Scaling",
+        authors: "Tianhao Chen, Xin Xu, Zijing Liu, <strong>Pengxiang Li</strong>, Xinyuan Song, Ajay Kumar Jaiswal, Fan Zhang, Jishan Hu, Yang Wang, Hao Chen, Shizhe Diao, Shiwei Liu, Yu Li, Lu Yin, Can Yang",
+        venue: "NeurIPS 2025",
+        description: "GPAS scales down intermediate activations while preserving their gradients, improving the training dynamics and convergence of language models.",
+        image: "./images/papers/gpas.png",
+        links: {
+            paper: "https://arxiv.org/abs/2506.22049",
+            code: "https://github.com/dandingsky/GPAS",
             project: null,
             video: null
         }
@@ -172,22 +211,22 @@ function renderPublications() {
         // 构建链接HTML
         let linksHTML = '';
         if (pub.links.paper && pub.links.paper !== '#') {
-            linksHTML += `<a href="${pub.links.paper}" class="link-button" target="_blank">Paper</a>`;
+            linksHTML += `<a href="${pub.links.paper}" class="link-button" target="_blank" rel="noopener noreferrer">Paper</a>`;
         }
         if (pub.links.code) {
-            linksHTML += `<a href="${pub.links.code}" class="link-button" target="_blank">Code</a>`;
+            linksHTML += `<a href="${pub.links.code}" class="link-button" target="_blank" rel="noopener noreferrer">Code</a>`;
         }
         if (pub.links.project) {
-            linksHTML += `<a href="${pub.links.project}" class="link-button" target="_blank">Project</a>`;
+            linksHTML += `<a href="${pub.links.project}" class="link-button" target="_blank" rel="noopener noreferrer">Project</a>`;
         }
         if (pub.links.video) {
-            linksHTML += `<a href="${pub.links.video}" class="link-button" target="_blank">Video</a>`;
+            linksHTML += `<a href="${pub.links.video}" class="link-button" target="_blank" rel="noopener noreferrer">Video</a>`;
         }
         
         publicationDiv.innerHTML = `
-            <div class="publication-image">
-                <img src="${pub.image || ''}" alt="${pub.title}" loading="lazy" onerror="this.style.display='none'">
-            </div>
+            ${pub.image ? `<div class="publication-image">
+                <img src="${pub.image}" alt="Figure from ${pub.title}" loading="lazy" onerror="this.parentElement.remove()">
+            </div>` : ''}
             <div class="publication-info">
                 <h4 class="publication-title">${pub.title}</h4>
                 <p class="publication-authors">${pub.authors}</p>

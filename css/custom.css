@@ -19,7 +19,7 @@
 /* Global font and color system */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-    font-size: 15px !important;
+    font-size: 16px !important;
     line-height: 1.6 !important;
     color: var(--text-primary) !important;
     letter-spacing: -0.01em !important;
@@ -173,7 +173,7 @@ body {
 
 /* About Me section */
 .profile-section .details {
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 1.65 !important;
     color: var(--text-secondary) !important;
 }
@@ -226,7 +226,7 @@ body {
 }
 
 .news-section li {
-    font-size: 13px !important;
+    font-size: 14px !important;
     color: var(--text-secondary) !important;
     margin-bottom: 6px !important;
     padding-left: 15px !important;
@@ -272,7 +272,7 @@ body {
 .publication-section .publication-image img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
     transition: transform 0.3s ease !important;
 }
 
@@ -320,7 +320,7 @@ body {
 }
 
 .publication-section .publication-title {
-    font-size: 15px !important;
+    font-size: 16px !important;
     font-weight: 600 !important;
     line-height: 1.4 !important;
     margin-bottom: 4px !important;
@@ -379,8 +379,8 @@ body {
 }
 
 .publication-section .publication-desc {
-    font-size: 13px !important;
-    color: var(--text-light) !important;
+    font-size: 14px !important;
+    color: var(--text-secondary) !important;
     line-height: 1.5 !important;
     margin-bottom: 8px !important;
 }
@@ -390,7 +390,7 @@ body {
 }
 
 .publication-section .link-button {
-    font-size: 12px !important;
+    font-size: 14px !important;
     padding: 2px 8px !important;
     margin-right: 6px !important;
     border: 1px solid var(--border-light) !important;
@@ -514,4 +514,38 @@ body, .education-item .university {
     font-feature-settings: 'kern' 1 !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Keep the existing layout comfortable on narrow screens. */
+.news-list {
+    list-style: none;
+}
+
+.publication-title,
+.publication-authors,
+.news-list a {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 24px 20px !important;
+    }
+
+    .intro-section .avatar-container .avatar {
+        margin: 0 auto 20px !important;
+    }
+
+    .intro-section .name {
+        font-size: 28px !important;
+    }
+}
+
+@media (pointer: coarse) {
+    .publication-section .link-button,
+    .intro-section .contact a {
+        min-height: 44px;
+        display: inline-flex !important;
+        align-items: center;
+    }
 }
