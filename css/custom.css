@@ -1,272 +1,246 @@
-/* Custom Typography and Clean Design with Google/Claude Colors */
+/* Clean Academic Typography and Layout */
 
-/* Import better fonts */
+/* Import professional fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap');
 
-/* Color System inspired by Google & Claude */
+/* Color System - Restrained Academic Palette */
 :root {
-    --google-blue: #4285F4;
-    --google-red: #EA4335;
-    --google-yellow: #FBBC04;
-    --google-green: #34A853;
-    --claude-orange: #FF6B35;
-    --text-primary: #202124;
-    --text-secondary: #5f6368;
-    --text-light: #80868b;
-    --border-light: #e8eaed;
+    --accent-blue: #2563eb;
+    --accent-blue-hover: #1d4ed8;
+    --text-primary: #1a1a1a;
+    --text-secondary: #525252;
+    --text-muted: #737373;
+    --border-light: #e5e5e5;
+    --bg-card: #fafafa;
 }
 
-/* Global font and color system */
+/* Global Typography */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-    font-size: 15px !important;
-    line-height: 1.6 !important;
+    font-size: 16px !important;
+    line-height: 1.65 !important;
     color: var(--text-primary) !important;
     letter-spacing: -0.01em !important;
 }
 
-/* Reduce overall spacing */
+/* Wrapper - Better breathing room */
 .wrapper {
-    padding: 30px 40px !important;
+    padding: 50px 60px !important;
+    max-width: 1000px !important;
 }
 
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 30px 20px !important;
+    }
+}
+
+/* Section Spacing */
 .section {
-    margin-bottom: 25px !important;
+    margin-bottom: 50px !important;
 }
 
-/* Section titles - Subtle color accents */
+.section:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Section Titles - Stronger Hierarchy */
 .section-title {
-    font-size: 13px !important;
+    font-size: 22px !important;
     font-weight: 600 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.08em !important;
-    color: var(--text-secondary) !important;
-    margin-bottom: 15px !important;
-    padding-bottom: 6px !important;
-    border-bottom: 1px solid var(--border-light) !important;
+    text-transform: none !important;
+    letter-spacing: -0.02em !important;
+    color: var(--text-primary) !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px !important;
+    border-bottom: 2px solid var(--border-light) !important;
     position: relative !important;
 }
 
-/* Add a subtle colored accent line under section titles */
-.section-title:after {
+.section-title::after {
     content: "" !important;
     position: absolute !important;
-    bottom: -1px !important;
+    bottom: -2px !important;
     left: 0 !important;
     height: 2px !important;
-    width: 30px !important;
+    width: 60px !important;
+    background: var(--accent-blue) !important;
 }
 
-.profile-section .section-title:after {
-    background: var(--google-blue) !important;
-}
-
-.news-section .section-title:after {
-    background: var(--google-green) !important;
-}
-
-.publication-section .section-title:after {
-    background: var(--claude-orange) !important;
-}
-
-.section:nth-of-type(4) .section-title:after {
-    background: var(--google-red) !important;
-}
-
-.section:nth-of-type(5) .section-title:after {
-    background: var(--google-yellow) !important;
-}
-
-/* Profile section - Clean and professional */
+/* Hero/Intro Section */
 .intro-section {
-    margin-bottom: 25px !important;
+    margin-bottom: 50px !important;
 }
 
 .intro-section .name {
-    font-family: 'Source Serif Pro', serif !important;
-    font-size: 32px !important;
+    font-family: 'Source Serif Pro', Georgia, serif !important;
+    font-size: clamp(2rem, 5vw, 2.75rem) !important;
     font-weight: 600 !important;
     color: var(--text-primary) !important;
-    letter-spacing: -0.02em !important;
-    margin-bottom: 5px !important;
+    letter-spacing: -0.03em !important;
+    margin-bottom: 8px !important;
+    line-height: 1.2 !important;
 }
 
 .intro-section .name .name-cn {
     font-family: "Liu Jian Mao Cao", "Zhi Mang Xing", "Ma Shan Zheng", "Kaiti SC", "STKaiti", "KaiTi", serif !important;
     font-weight: 400 !important;
     letter-spacing: 0.02em !important;
-    font-size: 1.18em !important;
+    font-size: 1.15em !important;
 }
 
 .intro-section .title {
-    font-size: 16px !important;
+    font-size: 18px !important;
     font-weight: 500 !important;
     color: var(--text-secondary) !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 12px !important;
 }
 
-/* Special accent for PolyU */
-.intro-section .title:after {
-    content: " •" !important;
-    color: var(--claude-orange) !important;
-    font-weight: 700 !important;
+/* Remove decorative bullet from title */
+.intro-section .title::after {
+    content: none !important;
 }
 
+/* Contact Links - Clean layout */
 .intro-section .contact {
-    margin-top: 10px !important;
+    margin-top: 14px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0 20px !important;
+    align-items: center !important;
 }
 
 .intro-section .contact a {
-    font-size: 14px !important;
-    color: var(--google-blue) !important;
+    font-size: 15px !important;
+    color: var(--accent-blue) !important;
     font-weight: 500 !important;
-    position: relative !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
 }
 
 .intro-section .contact a:hover {
-    color: #1967D2 !important;
-    text-decoration: none !important;
+    color: var(--accent-blue-hover) !important;
 }
 
-/* Different colors for different contact links */
-.intro-section .contact a:nth-child(1) {
-    color: var(--google-blue) !important;
+@media (max-width: 768px) {
+    .intro-section .contact {
+        flex-direction: column !important;
+        gap: 8px 0 !important;
+        align-items: flex-start !important;
+    }
 }
 
-.intro-section .contact a[href*="github"] {
-    color: var(--text-secondary) !important;
-}
-
-.intro-section .contact a[href*="github"]:hover {
-    color: var(--text-primary) !important;
-}
-
-.intro-section .contact a[href*="scholar"] {
-    color: var(--google-green) !important;
-}
-
-.intro-section .contact a[href*="scholar"]:hover {
-    color: #1E8E3E !important;
-}
-
-.intro-section .contact a[href*="CV"] {
-    color: var(--google-red) !important;
-}
-
-.intro-section .contact a[href*="CV"]:hover {
-    color: #C5221F !important;
-}
-
-/* Avatar - Cleaner look */
+/* Avatar */
 .avatar {
     border-radius: 8px !important;
-    width: 120px !important;
-    height: 160px !important;
+    width: 130px !important;
+    height: 170px !important;
     object-fit: cover !important;
-    border: 2px solid var(--border-light) !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid var(--border-light) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
 }
 
 .intro-section .avatar-container .avatar {
-    margin-top: -18px !important;
+    margin-top: -15px !important;
 }
 
-/* About Me section */
+/* About/Profile Section */
 .profile-section .details {
-    font-size: 14px !important;
-    line-height: 1.65 !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
     color: var(--text-secondary) !important;
 }
 
-.profile-section .details ul {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
+.profile-section .details p {
+    margin-bottom: 12px !important;
 }
 
-.profile-section .details li {
-    margin-bottom: 6px !important;
-    font-size: 14px !important;
-    color: var(--text-secondary) !important;
+.profile-section .details a {
+    color: var(--accent-blue) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid transparent !important;
+    transition: border-color 0.2s ease !important;
 }
 
-.profile-section .details li strong {
-    font-weight: 600 !important;
-    color: var(--text-primary) !important;
+.profile-section .details a:hover {
+    border-bottom-color: var(--accent-blue) !important;
 }
 
-/* Highlight specific research areas with subtle colors */
-.profile-section .details li:nth-child(1) strong {
-    color: var(--google-blue) !important;
-}
-
-.profile-section .details li:nth-child(2) strong {
-    color: var(--google-green) !important;
-}
-
-.profile-section .details li:nth-child(3) strong {
-    color: var(--claude-orange) !important;
-}
-
-.profile-section .details li:nth-child(4) strong {
-    color: var(--google-red) !important;
-}
-
-/* News section - Compact */
+/* News Section */
 .news-section {
-    margin-bottom: 25px !important;
-}
-
-.news-section div[style*="height:200px"] {
-    height: 120px !important;
+    margin-bottom: 50px !important;
 }
 
 .news-section ul {
     margin: 0 !important;
     padding-left: 0 !important;
+    list-style: none !important;
 }
 
 .news-section li {
-    font-size: 13px !important;
+    font-size: 15px !important;
     color: var(--text-secondary) !important;
-    margin-bottom: 6px !important;
-    padding-left: 15px !important;
-    position: relative !important;
+    margin-bottom: 14px !important;
+    line-height: 1.6 !important;
+    display: flex !important;
+    gap: 10px !important;
+    align-items: flex-start !important;
 }
 
-/* Colored bullets for news */
-.news-section li:before {
-    content: "▸" !important;
-    position: absolute !important;
-    left: 0 !important;
-    color: var(--google-green) !important;
-    font-weight: 700 !important;
+.news-section li:last-child {
+    margin-bottom: 0 !important;
 }
 
-/* Publications - Clean and readable with images */
+/* News Venue Pills */
+.pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 4px 10px !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 12px !important;
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+
+.pill-bar {
+    display: inline-block !important;
+    width: 3px !important;
+    height: 14px !important;
+    border-radius: 2px !important;
+    background: var(--accent-blue) !important;
+    flex-shrink: 0 !important;
+}
+
+/* Publications Section */
 .publication-section .publication {
-    margin-bottom: 25px !important;
-    padding-bottom: 20px !important;
+    margin-bottom: 35px !important;
+    padding-bottom: 30px !important;
     border-bottom: 1px solid var(--border-light) !important;
     display: flex !important;
-    gap: 20px !important;
+    gap: 24px !important;
     align-items: flex-start !important;
 }
 
 .publication-section .publication:last-child {
     border-bottom: none !important;
     padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 
-/* Publication image styling */
+/* Publication Images */
 .publication-section .publication-image {
     flex-shrink: 0 !important;
-    width: 180px !important;
-    height: 100px !important;
+    width: 200px !important;
+    height: 110px !important;
     overflow: hidden !important;
     border-radius: 6px !important;
     border: 1px solid var(--border-light) !important;
-    background: #f8f9fa !important;
-    position: relative !important;
+    background: var(--bg-card) !important;
 }
 
 .publication-section .publication-image img {
@@ -280,184 +254,127 @@ body {
     transform: scale(1.05) !important;
 }
 
-/* If no image is available, show placeholder */
-.publication-section .publication-image:not(:has(img)),
-.publication-section .publication-image img[src=""] {
-    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    color: var(--text-light) !important;
-    font-size: 12px !important;
+@media (max-width: 768px) {
+    .publication-section .publication {
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+    
+    .publication-section .publication-image {
+        width: 100% !important;
+        height: 180px !important;
+    }
 }
 
-.publication-section .publication-image:not(:has(img)):before,
-.publication-section .publication-image img[src=""]:before {
-    content: "Paper Figure" !important;
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-}
-
-/* Publication info adjustments */
+/* Publication Info */
 .publication-section .publication-info {
     flex: 1 !important;
     min-width: 0 !important;
 }
 
-/* Responsive design for mobile */
-@media (max-width: 768px) {
-    .publication-section .publication {
-        flex-direction: column !important;
-        gap: 15px !important;
-    }
-    
-    .publication-section .publication-image {
-        width: 100% !important;
-        height: 150px !important;
-    }
-}
-
 .publication-section .publication-title {
-    font-size: 15px !important;
+    font-size: 17px !important;
     font-weight: 600 !important;
     line-height: 1.4 !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 8px !important;
     color: var(--text-primary) !important;
 }
 
 .publication-section .publication-authors {
-    font-size: 13px !important;
+    font-size: 14px !important;
     color: var(--text-secondary) !important;
-    margin-bottom: 3px !important;
-    line-height: 1.4 !important;
+    margin-bottom: 6px !important;
+    line-height: 1.5 !important;
 }
 
-/* Your name highlighted with Claude orange */
 .publication-section .publication-authors strong {
     color: var(--text-primary) !important;
     font-weight: 600 !important;
-    background: linear-gradient(120deg, rgba(255,107,53,0.15) 0%, rgba(255,107,53,0.15) 100%) !important;
-    padding: 1px 3px !important;
-    border-radius: 2px !important;
+    text-decoration: underline !important;
+    text-decoration-color: var(--accent-blue) !important;
+    text-decoration-thickness: 2px !important;
+    text-underline-offset: 2px !important;
 }
 
-/* Venue colors based on type */
 .publication-section .publication-venue {
-    font-size: 13px !important;
+    font-size: 14px !important;
     font-weight: 600 !important;
-    margin-bottom: 6px !important;
-}
-
-/* Color code venues */
-.publication-venue:contains("ICLR"),
-.publication-venue:contains("NeurIPS"),
-.publication-venue:contains("ICML") {
-    color: var(--google-blue) !important;
-}
-
-.publication-venue:contains("WACV"),
-.publication-venue:contains("CVPR"),
-.publication-venue:contains("ICCV") {
-    color: var(--google-green) !important;
-}
-
-.publication-venue:contains("ACL"),
-.publication-venue:contains("EMNLP") {
-    color: var(--google-red) !important;
-}
-
-.publication-venue:contains("MM"),
-.publication-venue:contains("arXiv") {
-    color: var(--claude-orange) !important;
-}
-
-/* Default color for venues */
-.publication-venue {
-    color: var(--google-red) !important;
-}
-
-.publication-section .publication-desc {
-    font-size: 13px !important;
-    color: var(--text-light) !important;
-    line-height: 1.5 !important;
+    color: var(--accent-blue) !important;
     margin-bottom: 8px !important;
 }
 
+.publication-section .publication-desc {
+    font-size: 14px !important;
+    color: var(--text-muted) !important;
+    line-height: 1.6 !important;
+    margin-bottom: 10px !important;
+}
+
 .publication-section .publication-links {
-    margin-top: 6px !important;
+    margin-top: 10px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
 }
 
 .publication-section .link-button {
-    font-size: 12px !important;
-    padding: 2px 8px !important;
-    margin-right: 6px !important;
+    font-size: 13px !important;
+    padding: 4px 12px !important;
     border: 1px solid var(--border-light) !important;
-    border-radius: 3px !important;
+    border-radius: 4px !important;
     color: var(--text-secondary) !important;
     text-decoration: none !important;
     display: inline-block !important;
-    transition: all 0.15s !important;
+    transition: all 0.2s ease !important;
     background: white !important;
 }
 
 .publication-section .link-button:hover {
-    border-color: var(--google-blue) !important;
-    color: var(--google-blue) !important;
-    background: rgba(66,133,244,0.04) !important;
+    border-color: var(--accent-blue) !important;
+    color: var(--accent-blue) !important;
+    background: rgba(37, 99, 235, 0.04) !important;
 }
 
-/* Different hover colors for different link types */
-.publication-section .link-button:contains("Code"):hover {
-    border-color: var(--google-green) !important;
-    color: var(--google-green) !important;
-    background: rgba(52,168,83,0.04) !important;
-}
-
-/* Research Interests - Compact list */
+/* Research Interests & Education - Lists */
 .section .details ul {
-    padding-left: 20px !important;
-    margin: 10px 0 !important;
+    padding-left: 22px !important;
+    margin: 0 !important;
 }
 
 .section .details li {
-    font-size: 14px !important;
-    margin-bottom: 5px !important;
-    line-height: 1.5 !important;
+    font-size: 16px !important;
+    margin-bottom: 10px !important;
+    line-height: 1.6 !important;
     color: var(--text-secondary) !important;
 }
 
-/* Education section - Timeline style with colors */
+.section .details li:last-child {
+    margin-bottom: 0 !important;
+}
+
+.section .details li strong {
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+}
+
+/* Education Section - Timeline Style */
 .education-item {
-    padding: 8px 0 !important;
-    padding-left: 15px !important;
-    margin-bottom: 10px !important;
+    padding: 12px 0 12px 20px !important;
+    margin-bottom: 16px !important;
     border-left: 2px solid var(--border-light) !important;
     position: relative !important;
 }
 
-.education-item:before {
+.education-item::before {
     content: "" !important;
     position: absolute !important;
     left: -5px !important;
-    top: 12px !important;
+    top: 16px !important;
     width: 8px !important;
     height: 8px !important;
     border-radius: 50% !important;
-}
-
-/* Different colors for education timeline */
-.education-item:nth-child(1):before {
-    background: var(--google-blue) !important;
-}
-
-.education-item:nth-child(2):before {
-    background: var(--claude-orange) !important;
-}
-
-.education-item:nth-child(3):before {
-    background: var(--google-green) !important;
+    background: var(--accent-blue) !important;
+    border: 2px solid white !important;
 }
 
 .education-item:last-child {
@@ -465,53 +382,42 @@ body {
 }
 
 .education-item .degree {
-    font-size: 14px !important;
+    font-size: 16px !important;
     font-weight: 600 !important;
     color: var(--text-primary) !important;
-    margin-bottom: 2px !important;
+    margin-bottom: 4px !important;
 }
 
 .education-item .university {
-    font-size: 14px !important;
+    font-size: 15px !important;
     color: var(--text-secondary) !important;
-    margin-bottom: 2px !important;
+    margin-bottom: 4px !important;
 }
 
 .education-item .time {
-    font-size: 12px !important;
-    color: var(--text-light) !important;
+    font-size: 14px !important;
+    color: var(--text-muted) !important;
 }
 
-/* Highlight advisor names */
-.education-item .time:contains("Advisor") {
-    color: var(--text-secondary) !important;
-}
-
-/* General links */
+/* General Links */
 a {
-    color: var(--google-blue) !important;
+    color: var(--accent-blue) !important;
     text-decoration: none !important;
-    transition: color 0.15s !important;
+    transition: color 0.2s ease !important;
 }
 
 a:hover {
-    color: #1967D2 !important;
+    color: var(--accent-blue-hover) !important;
 }
 
 /* Improve readability */
 p {
-    margin-bottom: 10px !important;
+    margin-bottom: 12px !important;
 }
 
-/* Remove excessive padding */
-.wrapper .section .intro ul,
-.wrapper .section .details ul {
-    margin-bottom: 0 !important;
-}
-
-/* Ensure Chinese characters display well */
-body, .education-item .university {
-    font-feature-settings: 'kern' 1 !important;
+/* Font rendering */
+body {
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
 }
